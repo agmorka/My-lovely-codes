@@ -1,12 +1,8 @@
-
-
-libname funclib '/bec/projects/default/becrun/sas/functions';
-
-proc fcmp outlib=funclib.fcpfuncs.agp;
+proc fcmp outlib=work.myfuncs.funcs;
 	deletefunc get_bdate_from_cpr;
 run;
 
-proc fcmp outlib=funclib.fcpfuncs.agp;
+proc fcmp outlib=work.myfuncs.funcs;
 	function get_bdate_from_cpr(cpr $);
 	/* Calculates birthdate from CPR number. 
 	Validates the input string by checking the string length and CPR checksum.
